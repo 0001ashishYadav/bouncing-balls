@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jumpingballs-animation</title>
+  </head>
+  <body>
+    <div class="main-outer-div">
+      <div class="rotate-div">
+        <div class="h-first-div"></div>
+        <div class="h-second-div"></div>
+        <div class="h-third-div"></div>
+        <div class="h-fourth-div"></div>
+        <div class="h-fifth-div"></div>
+      </div>
+      <div class="main-container">
+        <div class="main-prg-div">
+          <span class="main-p1">ju</span>
+          <span class="main-p2">mpi</span>
+          <span class="main-p3">ng</span>
+          <span class="main-p4">bal</span>
+          <span class="main-p5">ls</span>
+        </div>
+        <div class="linear-bottom-div">
+          <div class="first-ball"></div>
+          <div class="second-ball"></div>
+          <div class="third-ball"></div>
+          <div class="fourth-ball"></div>
+          <div class="fifth-ball"></div>
+        </div>
+      </div>
+    </div>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: black; */
+        /* background-image: url("https://img.freepik.com/free-vector/realistic-spheres-background_23-2149181621.jpg");
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat; */
+      }
+
+      .main-outer-div {
+        height: 620px;
+        width: 1020px;
+        /* border: 2px solid red; */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        position: relative;
+      }
+
+      .rotate-div {
+        display: flex;
+        position: absolute;
+        /* bottom: 300px; */
+        animation: linear-border 10s infinite linear;
+      }
+
+      @keyframes linear-border {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .h-first-div {
+        height: 1500px;
+        width: 100px;
+        background-color: rgb(186, 168, 103);
+      }
+
+      .h-second-div {
+        height: 1500px;
+        width: 100px;
+        background-color: rgb(92, 136, 92);
+      }
+
+      .h-third-div {
+        height: 1500px;
+        width: 100px;
+        background-color: rgb(219, 122, 4);
+      }
+
+      .h-fourth-div {
+        height: 1500px;
+        width: 100px;
+        background-color: rgb(34, 4, 232);
+      }
+
+      .h-fifth-div {
+        height: 1500px;
+        width: 100px;
+        background-color: rgb(5, 5, 92);
+      }
+
+      .main-container {
+        height: 600px;
+        width: 1000px;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        /* background-color: aliceblue; */
+        background-color: white;
+      }
+
+      .main-prg-div {
+        position: absolute;
+        top: 20px;
+      }
+
+      .main-p1 {
+        font-size: 100px;
+        color: rgb(186, 168, 103);
+      }
+
+      .main-p2 {
+        font-size: 100px;
+        color: rgb(92, 136, 92);
+      }
+
+      .main-p3 {
+        font-size: 100px;
+        color: rgb(219, 122, 4);
+      }
+
+      .main-p4 {
+        font-size: 100px;
+        color: rgb(34, 4, 232);
+      }
+
+      .main-p5 {
+        font-size: 100px;
+        color: rgb(5, 5, 92);
+      }
+
+      .linear-bottom-div {
+        height: 10px;
+        width: 800px;
+        background-image: linear-gradient(
+          to right,
+          rgb(186, 168, 103),
+          rgb(92, 136, 92),
+          rgb(219, 122, 4),
+          rgb(133, 6, 230),
+          rgb(5, 5, 92)
+        );
+        margin-top: 500px;
+        position: relative;
+      }
+
+      .first-ball {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        background-color: rgb(186, 168, 103);
+        position: absolute;
+        top: -72px;
+        left: 120px;
+        animation: first 1s 0.1s infinite linear;
+      }
+
+      @keyframes first {
+        0% {
+          top: -72px;
+        }
+
+        50% {
+          top: -272px;
+        }
+
+        100% {
+          top: -72px;
+          box-shadow: 0px 10px 20px rgb(255, 221, 0);
+        }
+      }
+
+      .second-ball {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        background-color: rgb(92, 136, 92);
+        position: absolute;
+        top: -72px;
+        left: 240px;
+        animation: second 1s 0.3s infinite linear;
+      }
+
+      @keyframes second {
+        0% {
+          top: -72px;
+        }
+
+        50% {
+          top: -272px;
+        }
+
+        100% {
+          top: -72px;
+          box-shadow: 0px 10px 20px greenyellow;
+        }
+      }
+
+      .third-ball {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        background-color: rgb(219, 122, 4);
+        position: absolute;
+        top: -72px;
+        left: 360px;
+        animation: third 1s 0.6s infinite linear;
+      }
+
+      @keyframes third {
+        0% {
+          top: -72px;
+        }
+
+        50% {
+          top: -272px;
+        }
+
+        100% {
+          top: -72px;
+          box-shadow: 0px 10px 20px red;
+        }
+      }
+
+      .fourth-ball {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        background-color: rgb(129, 14, 217);
+        position: absolute;
+        top: -72px;
+        left: 480px;
+        animation: fourth 1s 0.9s infinite linear;
+      }
+
+      @keyframes fourth {
+        0% {
+          top: -72px;
+        }
+
+        50% {
+          top: -272px;
+        }
+
+        100% {
+          top: -72px;
+          box-shadow: 0px 10px 20px yellow;
+        }
+      }
+
+      .fifth-ball {
+        height: 70px;
+        width: 70px;
+        border-radius: 50px;
+        background-color: rgb(5, 5, 92);
+        position: absolute;
+        top: -72px;
+        left: 600px;
+        animation: fifth 1s 1.2s infinite linear;
+      }
+
+      @keyframes fifth {
+        0% {
+          top: -72px;
+        }
+
+        50% {
+          top: -272px;
+        }
+
+        100% {
+          top: -72px;
+          box-shadow: 0px 10px 20px gray;
+        }
+      }
+    </style>
+  </body>
+</html>
